@@ -21,7 +21,8 @@
         </activity>
         <activity android:name=".Select" />
         <activity android:name=".Info" />
-        <activity android:name=".SelectProducts"></activity>
+        <activity android:name=".SelectProducts" />
+        <activity android:name=".SelectPadecimiento"></activity>
     </application>
 
 </manifest>

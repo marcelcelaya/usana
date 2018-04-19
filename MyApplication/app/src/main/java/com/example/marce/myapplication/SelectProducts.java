@@ -30,7 +30,18 @@ public class SelectProducts extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent myIntent = new Intent(view.getContext(),Info.class);
-                ArrayList<Producto> theproducts = Producto.InicializarMicronutrientes();
+                ArrayList<Producto> theproducts;
+                switch(position)
+                {
+                    case 0: theproducts = Producto.InicializarMicronutrientes();break;
+                    case 1: theproducts = Producto.InicializarMacronutrientes();break;
+                    case 2: theproducts = Producto.InicializarNinos();break;
+                    case 3: theproducts = Producto.InicializarSenseCP();break;
+                    case 4: theproducts = Producto.InicializarDetox();break;
+                    case 5: theproducts =  Producto.InicializarEnergia();break;
+                    default: theproducts = null;
+                }
+
                 myIntent.putExtra("Producto",theproducts.get(position));
                 startActivity(myIntent);
             }
